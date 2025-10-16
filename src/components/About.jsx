@@ -347,7 +347,7 @@ const About = () => {
                             </div>
 
 
-                            <div className="mb-4" data-aos-delay="400" data-aos="fade-right">
+                            <div className="mb-4 d-flex gap-3" data-aos-delay="400" data-aos="fade-right">
                                 <a
                                     href="/Portfolio.pdf"
                                     className="btn-gradient"
@@ -358,8 +358,17 @@ const About = () => {
                                     <i className="bx bx-download"></i>
                                     Download My Portfolio
                                 </a>
+                                <a
+                                    href="/Transcript.pdf"
+                                    className="btn-gradient"
+                                    download
+                                    data-bs-toggle="tooltip"
+                                    title="Download My Transcript"
+                                >
+                                    <i className="bx bx-download"></i>
+                                    Download My Transcript
+                                </a>
                             </div>
-
                         </div>
                     </div>
 

@@ -172,7 +172,9 @@ const Contact = () => {
           box-shadow: 0 12px 30px rgba(102,126,234,0.4);
           color: white;
         }
-
+        .profile-container {
+            position: relative;
+        }
         @media (max-width: 767px) {
           .message-form { padding: 20px; }
           .section-title { font-size: 2rem; }
@@ -185,7 +187,7 @@ const Contact = () => {
             <h2 className="section-title">Get in Touch</h2>
           </div>
 
-          <div className="row">
+          <div className="row align-items-center">
             <div className="col-lg-6 mb-4" data-aos="fade-right">
               <h3 className="section-subtitle mb-3">
                 <i className="bx bx-info-circle"></i> Contact Information
@@ -196,7 +198,11 @@ const Contact = () => {
                   <div
                     key={index}
                     className={`contact-info-card ${isClickable ? 'clickable' : ''}`}
-                    onClick={() => isClickable ? window.open(info.action, '_blank') : handleCopy(info.value)}
+                    onClick={() =>
+                      isClickable
+                        ? window.open(info.action, '_blank')
+                        : handleCopy(info.value)
+                    }
                   >
                     <i className={`contact-info-icon ${info.icon}`}></i>
                     <div>
@@ -208,42 +214,23 @@ const Contact = () => {
               })}
             </div>
 
-            {/* <div className="col-lg-6 mb-4" data-aos="fade-left">
-              <div className="message-form">
-                <h3 className="h4 mb-4">
-                  <i className="bx bx-message-dots me-2 text-primary"></i> Send a Message
-                </h3>
-                <form onSubmit={handleSubmit}>
-                  <div className="input-wrapper">
-                    <input type="text" className="modern-input" id="fullName" name="fullName" placeholder=" " required />
-                    <label htmlFor="fullName" className="floating-label">Full Name</label>
-                  </div>
-
-                  <div className="input-wrapper">
-                    <input type="email" className="modern-input" id="emailAddress" name="emailAddress" placeholder=" " required />
-                    <label htmlFor="emailAddress" className="floating-label">Email Address</label>
-                  </div>
-
-                  <div className="input-wrapper">
-                    <input type="text" className="modern-input" id="messageSubject" name="messageSubject" placeholder=" " required />
-                    <label htmlFor="messageSubject" className="floating-label">Subject</label>
-                  </div>
-
-                  <div className="input-wrapper">
-                    <textarea className="modern-textarea" id="messageContent" name="messageContent" placeholder="Write your message here..." rows="5" required></textarea>
-                  </div>
-
-                  <div className="text-end">
-                    <button type="submit" className="submit-btn">
-                      <i className="bx bx-send me-2"></i> Send Message
-                    </button>
-                  </div>
-                </form>
+            <div
+              className="col-lg-6 mb-4 d-flex justify-content-center align-items-center"
+              data-aos-delay="500"
+              data-aos="fade-left"
+            >
+              <div className="profile-container text-center">
+                <img
+                  src="/profile1.jpg"
+                  alt="Mongkolrach Profile"
+                  className="profile-img img-fluid rounded-4 shadow-sm"
+                />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
+
     </>
   );
 };

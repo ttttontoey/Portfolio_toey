@@ -16,54 +16,45 @@ const Project = () => {
     {
       id: 1,
       title: 'CDG Hackathon 2025',
-      longDesc: 'Developed a responsive e-commerce platform with product filtering, cart management, and secure payment integration using Stripe. The project focused on delivering a seamless user experience with fast load times and intuitive navigation.',
+      longDesc: 'ได้มีโอกาสเข้าร่วม Hackathon 2025  ภายใต้โจทย์แข่งขัน Trust in Tech: AI-Power and KYC for Smart Public Services โดยใช้แนวคิด Technology: AI และ KYC พัฒนาโซลูชันเพื่อทำให้การเข้าถึงข้อมูลภาครัฐ ซึ่งทีมได้รับรางวัลชมเชย ภายใต้โปรเจค Pulse ID',
       image: '/CDG.jpg',
       previewLink: 'https://www.canva.com/design/DAGu1-PL2es/7i995_c5UAIcm5lJgrUfQA/edit?utm_content=DAGu1-PL2es&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
-      languages: ['React', 'Node.js', 'Stripe', 'CSS'],
-      team: ['Fajar Ramadhan (Lead Developer)', 'Sarah UI (Designer)', 'John Backend (API Developer)'],
+      languages: [],
+      team: [],
     },
     {
       id: 2,
       title: 'Tokio Marine Life Insurance Hackathon',
-      longDesc: 'Built a task management application with real-time collaboration features, drag-and-drop task boards, and user authentication. The app integrates with third-party APIs for notifications and cloud storage.',
+      longDesc: 'มีโอกาสได้เข้าร่วม Tokio Marine Life Insurance Hackathon โดยได้รับตำแหน่ง Tester ในการวางแผนขั้นตอนการทำงานของระบบและตรวจสอบความถูกต้องของการใช้งาน',
       image: '/Tokio.jpg',
-      languages: ['React', 'Firebase', 'Tailwind CSS'],
-      team: ['Fajar Ramadhan (Frontend)', 'Lisa Wong (Backend)', 'Mike Chen (QA)'],
+      languages: [],
+      team: [],
     },
     {
       id: 3,
       title: 'i-Voting-KMUTNB',
-      longDesc: 'Created a weather dashboard that fetches real-time data from a weather API, displaying forecasts with interactive charts and location-based updates. The app features a clean, minimalistic design.',
+      longDesc: 'เป็นหนึ่งในทีมออกแบบระบบเลือกตั้งของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือในการเลือกหานักกิจกรรมภายในมหาวิทยาลัย',
       image: '/I-VOTING.jpg',
       previewLink: 'https://www.figma.com/proto/NKYrpboNhIQWYPvJtGbHpw/i-Voting-KMUTNB?node-id=20-216&p=f&t=tHBw2pVSAeREjSPW-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1',
-      languages: ['React', 'Chart.js', 'API'],
-      team: ['Fajar Ramadhan (Developer)', 'Anna Lee (Designer)'],
+      languages: [],
+      team: [],
     },
-    {
+{
       id: 4,
-      title: 'n8n : Agentic AI',
-      longDesc: 'Built a fitness tracking app with features for logging workouts, tracking progress, and setting goals. Includes integration with wearable devices and a gamified user experience to boost engagement.',
-      image: '/n8n.jpg',
-      previewLink: 'https://www.canva.com/design/DAG0LtjIDUU/dCpemtTk6F6EHRcNkPGZKg/edit?utm_content=DAG0LtjIDUU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
-      languages: ['React', 'TypeScript', 'GraphQL'],
-      team: ['Fajar Ramadhan (Frontend)', 'Emma Brown (Backend)', 'Jake Smith (Tester)'],
-    },
-        {
-      id: 5,
       title: 'Equarium',
-      longDesc: 'Developed a blog platform with a custom CMS, allowing users to create, edit, and publish posts with rich media. Includes user authentication, commenting system, and SEO optimization.',
+      longDesc: 'ได้รับตำแหน่ง System Analyst ในการวิเคราะห์และออกแบบระบบเพื่อให้ตรงกับการความต้องการของผู้ใช้และสะดวกต่อการเข้าใช้งาน',
       image: '/SE.jpg',
       previewLink: 'https://www.canva.com/design/DAGcPGpkWgY/NjPdl-rCeFHACBfCRNWbkQ/edit?utm_content=DAGcPGpkWgY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
-      languages: ['React', 'Node.js', 'MongoDB'],
-      team: ['Fajar Ramadhan (Full Stack)', 'Tom Harris (Content Manager)'],
+      languages: [],
+      team: [],
     },
     {
-      id: 6,
+      id: 5,
       title: 'Rajinibon',
-      longDesc: 'Designed and developed a personal portfolio website with a modern UI, smooth animations, and responsive design. Optimized for performance and SEO, with integration of contact forms and social media links.',
+      longDesc: 'มีโอกาสได้เข้าร่วมการแข่งขัน งานศิลปหัตถกรรมนักเรียน ครั้งที่68 และได้รับรางวัลเหรียญทองภายใต้หัวข้อการแข่งขันการสร้างการ์ตูนแอนิเมชั่น (2D Animation) ',
       image: '/RB.jpg',
-      languages: ['React', 'Bootstrap', 'JavaScript'],
-      team: ['Fajar Ramadhan (Solo Developer)'],
+      languages: [],
+      team: [],
     },
   ];
 
@@ -294,18 +285,21 @@ const Project = () => {
                     </div>
 
                     <h3 className="project-title">{project.title}</h3>
-                    <p className="project-languages">
-                      <strong>Tech:</strong> {project.languages.join(', ')}
-                    </p>
                   </div>
                   <div className={`project-details ${expandedId === project.id ? 'expanded' : ''}`}>
                     <p className="details-desc">{project.longDesc}</p>
-                    <p className="details-team">
-                      <strong>Team:</strong> {project.team.join(', ')}
-                    </p>
-                    <p className="details-languages">
-                      <strong>Technologies:</strong> {project.languages.join(', ')}
-                    </p>
+                    {project.team && project.team.length > 0 && (
+                      <p className="details-team">
+                        <strong>Team:</strong> {project.team.join(', ')}
+                      </p>
+                    )}
+
+                    {project.languages && project.languages.length > 0 && (
+                      <p className="details-languages">
+                        <strong>Technologies:</strong> {project.languages.join(', ')}
+                      </p>
+                    )}
+
                   </div>
                 </div>
               </div>
