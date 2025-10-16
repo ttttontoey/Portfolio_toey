@@ -32,7 +32,7 @@ const Contact = () => {
     };
 
     emailjs.send(
-      'service_sc4mcig',        // Your EmailJS service ID
+      'service_sc4mcig  ',        // Your EmailJS service ID
       'template_eyk2s24',       // Your EmailJS template ID
       templateParams,
       '9r54mpEu1tNUq78k6'       // Your EmailJS public key

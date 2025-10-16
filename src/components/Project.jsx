@@ -27,8 +27,6 @@ const Project = () => {
       title: 'Tokio Marine Life Insurance Hackathon',
       longDesc: 'Built a task management application with real-time collaboration features, drag-and-drop task boards, and user authentication. The app integrates with third-party APIs for notifications and cloud storage.',
       image: '/Tokio.jpg',
-      previewLink: 'https://example.com/taskapp',
-      githubLink: 'https://github.com/example/taskapp',
       languages: ['React', 'Firebase', 'Tailwind CSS'],
       team: ['Fajar Ramadhan (Frontend)', 'Lisa Wong (Backend)', 'Mike Chen (QA)'],
     },
@@ -61,16 +59,6 @@ const Project = () => {
     },
     {
       id: 6,
-      title: 'clone app',
-      longDesc: 'Designed and developed a personal portfolio website with a modern UI, smooth animations, and responsive design. Optimized for performance and SEO, with integration of contact forms and social media links.',
-      image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=300&h=200&fit=crop',
-      previewLink: 'https://example.com/portfolio',
-      githubLink: 'https://github.com/example/portfolio',
-      languages: ['React', 'Bootstrap', 'JavaScript'],
-      team: ['Fajar Ramadhan (Solo Developer)'],
-    },
-    {
-      id: 7,
       title: 'Rajinibon',
       longDesc: 'Designed and developed a personal portfolio website with a modern UI, smooth animations, and responsive design. Optimized for performance and SEO, with integration of contact forms and social media links.',
       image: '/RB.jpg',
@@ -276,29 +264,35 @@ const Project = () => {
                   <img src={project.image} alt={project.title} className="project-img" />
                   <div className="project-body">
                     <div className="project-links">
-                      <a
-                        href={project.previewLink}
-                        className="project-link"
-                        data-bs-toggle="tooltip"
-                        title="See Preview"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <i className="bx bx-link-external"></i>
-                      </a>
-                      <a
-                        href={project.githubLink}
-                        className="project-link"
-                        data-bs-toggle="tooltip"
-                        title="View GitHub"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <i className="bx bxl-github"></i>
-                      </a>
+                      {project.previewLink && (
+                        <a
+                          href={project.previewLink}
+                          className="project-link"
+                          data-bs-toggle="tooltip"
+                          title="See Preview"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <i className="bx bx-link-external"></i>
+                        </a>
+                      )}
+
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          className="project-link"
+                          data-bs-toggle="tooltip"
+                          title="View GitHub"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <i className="bx bxl-github"></i>
+                        </a>
+                      )}
                     </div>
+
                     <h3 className="project-title">{project.title}</h3>
                     <p className="project-languages">
                       <strong>Tech:</strong> {project.languages.join(', ')}
@@ -312,14 +306,6 @@ const Project = () => {
                     <p className="details-languages">
                       <strong>Technologies:</strong> {project.languages.join(', ')}
                     </p>
-                    <div className="d-flex gap-3">
-                      <a href="mailto:Fajarramadhan561@gmail.com" className="btn-gradient" data-bs-toggle="tooltip" title='Hire Now'>
-                        <i className="bx bx-briefcase"></i> Hire Now
-                      </a>
-                      <a href="tel:+6281234567890" className="btn-outline-gradient" data-bs-toggle="tooltip" title='Chat Us'>
-                        <i className="bx bx-chat"></i> Chat Us
-                      </a>
-                    </div>
                   </div>
                 </div>
               </div>
