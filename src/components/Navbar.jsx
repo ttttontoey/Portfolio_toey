@@ -115,6 +115,18 @@ const Navbar = () => {
           font-size: 1.5rem;
           color: #333;
         }
+        .brand-logo {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover .brand-logo {
+          transform: rotate(10deg) scale(1.05);
+        }
+
 
         /* Hide default bootstrap toggle on mobile */
         @media (max-width: 991.98px) {
@@ -153,7 +165,12 @@ const Navbar = () => {
         data-aos="fade-down"
       >
         <div className="container">
-          <a className="navbar-brand" href="#" data-aos-delay="600" data-aos="fade-right">MyPortfolio
+          <a className="navbar-brand d-flex align-items-center" href="#" data-aos-delay="600" data-aos="fade-right">
+            <img
+              src="/BT.jpg"
+              alt="Logo"
+              className="brand-logo me-2"
+            />
           </a>
 
           <button

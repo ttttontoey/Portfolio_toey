@@ -240,7 +240,6 @@ const Project = () => {
         <div className="container project-content">
           <div className="text-center mb-5" data-aos-delay="600" data-aos="fade-up">
             <h2 className="section-title">My Projects</h2>
-            <p className="lead text-muted">A showcase of my recent works and creative solutions</p>
           </div>
 
           <div className="row">
