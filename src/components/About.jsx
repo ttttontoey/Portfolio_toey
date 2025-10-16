@@ -310,7 +310,7 @@ const About = () => {
                                             </div>
                                             <div>
                                                 <span className="info-label">Location:</span>
-                                                <span className="info-value"> ฺBangkok , Thailand</span>
+                                                <span className="info-value"> Bangkok , Thailand</span>
                                             </div>
                                         </div>
                                     </div>
